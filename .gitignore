@@ -14,6 +14,6 @@
 !/tmp/.keep
 !/app/assets/javascripts/.keep
 /app/assets/javascripts
-
+.idea/
 # Ignore Byebug command history file.
 .byebug_history
