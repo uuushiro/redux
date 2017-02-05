@@ -12,6 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+!/app/assets/javascripts/.keep
+/app/assets/javascripts
 
 # Ignore Byebug command history file.
 .byebug_history
