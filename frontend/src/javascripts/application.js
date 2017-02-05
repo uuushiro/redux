@@ -1,29 +1,30 @@
 import React from 'react';
 import { render } from 'react-dom'
 import { createStore } from 'redux'
-import { Provider, connect } from 'react-redux'
+import { Provider } from 'react-redux'
+import todoApp from './reducers'
+import * as actions from './actions'
+import  App from './components/App'
 
-//Action
-function incrementCounter() {
-    return { type: 'INCREMENT_COUNTER' }
+const initialState = {
+    visibilityFilter: 'SHOW_ALL',
+    todos: [
+        {
+            text: 'Reduxのお勉強',
+            completed: true
+        },
+        {
+            text: 'なんとなく把握',
+            completed: false
+        }
+    ]
 }
 
-function decrementCounter() {
-    return { type: 'DECREMENT_COUNTER' }
-}
-//Reducer
-function counter(state = {counter: 0}, action) {
-    switch(action.type) {
-        case 'INCREMENT_COUNTER':
-            return {counter: state.counter + 1};
-        case 'DECREMENT_COUNTER':
-            return {counter: state.counter - 1};
-        default:
-            return state
-    }
-}
+const store = createStore(todoApp, initialState)
 
 render(
-    <h1>Hello Redux</h1>,
+    <Provider store={store}>
+        <App/>
+    </Provider>,
     document.getElementById('container')
-);
+)
