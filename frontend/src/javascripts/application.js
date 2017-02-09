@@ -18,7 +18,7 @@ const initialState = {
             completed: false
         }
     ]
-}
+};
 
 const store = createStore(todoApp, initialState)
 
@@ -27,4 +27,4 @@ render(
         <App/>
     </Provider>,
     document.getElementById('container')
-)
+);
