@@ -7,6 +7,7 @@ import * as actions from './actions'
 import  App from './components/App'
 
 const initialState = {
+    counter :0,
     visibilityFilter: 'SHOW_ALL',
     todos: [
         {

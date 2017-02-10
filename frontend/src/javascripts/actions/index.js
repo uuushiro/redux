@@ -10,3 +10,10 @@ export function setVisibilityFilter(filter) {
     return { type: 'SET_VISIBILITY_FILTER', filter}
 }
 
+export function incrementCounter() {
+    return { type: 'INCREMENT_COUNTER' }
+}
+
+export function decrementCounter() {
+    return { type: 'DECREMENT_COUNTER' }
+}
