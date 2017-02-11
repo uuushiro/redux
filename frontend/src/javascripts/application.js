@@ -6,22 +6,7 @@ import todoApp from './reducers'
 import * as actions from './actions'
 import  App from './components/App'
 
-const initialState = {
-    counter :0,
-    visibilityFilter: 'SHOW_ALL',
-    todos: [
-        {
-            text: 'Reduxのお勉強',
-            completed: true
-        },
-        {
-            text: 'なんとなく把握',
-            completed: false
-        }
-    ]
-};
-
-const store = createStore(todoApp, initialState)
+const store = createStore(todoApp)
 
 render(
     <Provider store={store}>
